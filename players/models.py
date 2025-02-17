@@ -23,3 +23,9 @@ class Player(models.Model):
     mvps = models.IntegerField(default=0)
     yellow_cards = models.IntegerField(default=0)
     red_cards = models.IntegerField(default=0)
+
+    class Meta:
+        db_table = "player"
+
+    def __str__(self):
+        return f"{self.name} - {self.shirt_number}"

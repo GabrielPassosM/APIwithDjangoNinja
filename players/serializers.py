@@ -1,13 +1,13 @@
-from ninja import Schema
+from uuid import UUID
 
-from players.models import PlayerPosition
+from ninja import Schema
 
 
 class PlayerSchema(Schema):
-    id: int
+    id: int | UUID
     name: str
     shirt_number: int
-    position: PlayerPosition
+    position: str  # PlayerPosition
     image_url: str | None = None
     goals: int
     assists: int
