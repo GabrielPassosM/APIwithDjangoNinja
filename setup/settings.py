@@ -35,6 +35,7 @@ ALLOWED_HOSTS = [
     "https://tribunata-git-staging-gabriel-martins-projects-3f4ed294.vercel.app",
     "https://tribunata.vercel.app",
     "https://tribunata-v2.vercel.app",
+    "api-with-django-ninja.vercel.app",
 ]
 
 
