@@ -88,19 +88,9 @@ WSGI_APPLICATION = "setup.wsgi.application"
 import dj_database_url
 
 
-ENVIRONMENT = str(os.getenv("DJANGO_ENV", "development"))
-
-if ENVIRONMENT == "production":
-    DATABASES = {
-        "default": dj_database_url.config(default=os.getenv("DATABASE_URL"))
-    }
-else:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "db.sqlite3",
-        }
-    }
+DATABASES = {
+    "default": dj_database_url.config(default=os.getenv("DATABASE_URL"))
+}
 
 
 # Password validation
