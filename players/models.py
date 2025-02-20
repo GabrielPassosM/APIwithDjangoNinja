@@ -1,4 +1,5 @@
 from enum import Enum
+from uuid import uuid4
 
 from django.db import models
 
@@ -11,6 +12,7 @@ class PlayerPosition(Enum):
 
 
 class Player(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     name = models.CharField(max_length=100)
     shirt_number = models.IntegerField(default=0)
     position = models.CharField(

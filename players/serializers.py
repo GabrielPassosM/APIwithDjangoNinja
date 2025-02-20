@@ -4,7 +4,7 @@ from ninja import Schema
 
 
 class PlayerSchema(Schema):
-    id: int | UUID
+    id: UUID
     name: str
     shirt_number: int
     position: str  # PlayerPosition
