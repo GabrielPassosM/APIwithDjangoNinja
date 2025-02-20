@@ -11,6 +11,7 @@ api = NinjaAPI()
 def index(request):
     return "Hello, World!"
 
+
 api.add_router("/players", players_router)
 
 urlpatterns = [

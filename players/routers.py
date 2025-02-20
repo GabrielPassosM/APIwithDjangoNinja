@@ -43,7 +43,9 @@ def update_player(request, player_id: UUID, player_info: PlayerCreate):
 
 
 @router.put("/increment/{player_id}", response=PlayerResponse)
-def increment_player_stats(request, player_id: UUID, increment_info: PlayerIncrementStats):
+def increment_player_stats(
+    request, player_id: UUID, increment_info: PlayerIncrementStats
+):
     player = get_object_or_404(Player, id=player_id)
 
     for attr, value in increment_info.dict().items():

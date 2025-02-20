@@ -5,7 +5,14 @@ import time
 def _check_postgres():
     try:
         result = subprocess.run(
-            ["docker", "exec", "postgres-apiwithdjango", "pg_isready", "--host", "localhost"],
+            [
+                "docker",
+                "exec",
+                "postgres-apiwithdjango",
+                "pg_isready",
+                "--host",
+                "localhost",
+            ],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
